@@ -264,6 +264,7 @@ class RVAE(nn.Module):
         return result
 
     def sampler(self, batch_loader,batch_loader_2, seq_len, seed, use_cuda,i,beam_size,n_best):
+        print(bool(use_cuda))
         input = batch_loader.next_batch(1, 'valid', i)
         input = [Variable(t.from_numpy(var)) for var in input]
         input = [var.long() for var in input]
