@@ -402,7 +402,7 @@ class RVAE(nn.Module):
 
             # in this section, the sentences that are still active are
             # compacted so that the decoder is not run on completed sentences
-            active_idx = t.cuda.LongTensor([batch_idx[k] for k in active])
+            active_idx = t.LongTensor([batch_idx[k] for k in active])
             batch_idx = {beam: idx for idx, beam in enumerate(active)}
 
             def update_active(t):
