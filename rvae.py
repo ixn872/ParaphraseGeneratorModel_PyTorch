@@ -327,7 +327,7 @@ class RVAE(nn.Module):
         beam_size = beam_size
         batch_size = 1  
         
-        beam = [Beam(beam_size, batch_loader, cuda=True) for k in range(batch_size)]
+        beam = [Beam(beam_size, batch_loader, cuda=False) for k in range(batch_size)]
 
         batch_idx = list(range(batch_size))
         remaining_sents = batch_size
