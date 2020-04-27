@@ -1,6 +1,6 @@
 # Requirements:
 
-*PyTorch
+* PyTorch
 
-*Python3
+* Python3
 
